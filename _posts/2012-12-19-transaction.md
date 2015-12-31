@@ -3,7 +3,7 @@ layout: post
 title: "transaction"
 description: ""
 category: 事务
-tags: [java, 事务, hibernate, 并发]
+tags: [java, 并发]
 ---
 {% include JB/setup %}
 

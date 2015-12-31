@@ -3,7 +3,7 @@ layout: post
 title: "ImageMagick"
 description: ""
 category: "图像处理"
-tags: [ImageMagick, im4java, 图像处理, java]
+tags: [ImageMagick, java]
 ---
 {% include JB/setup %}
 

@@ -3,7 +3,7 @@ layout: post
 title: "booksummaries"
 description: ""
 category: 读书笔记
-tags: [读书笔记, 自然语言处理]
+tags: [thinking]
 ---
 {% include JB/setup %}
 

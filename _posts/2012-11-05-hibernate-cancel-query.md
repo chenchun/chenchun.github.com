@@ -3,7 +3,7 @@ layout: post
 title: "hibernate cancel query"
 description: ""
 category: hibernate
-tags: [hibernate, mysql, java, TODO]
+tags: [hibernate, java]
 ---
 {% include JB/setup %}
 

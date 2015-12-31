@@ -3,7 +3,7 @@ layout: post
 title: "IllegalArgumentException Invalid thread ID parameter: 0"
 description: ""
 category: bug
-tags: [jdk, bug, solr, java, TODO]
+tags: [jdk, java]
 ---
 {% include JB/setup %}
 
