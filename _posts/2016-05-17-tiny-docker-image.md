@@ -49,13 +49,13 @@ Linux标准C库，其实是对系统调用的一个封装，提供给C语言更�
 
 docker container只是一个容器，并不是一个操作系统，它的文件系统只是一些内核外的软件包。所以docker container的文件系统其实可以不包含任何东西
 
-## 制作一个最小的image
+## 制作一个0B最小的image
 
 ```
 $ tar cv --files-from /dev/null | docker import - scratch
 sha256:920d25467f2617c9317cdb116c65aaa59b4dd1d1231ceeb9481c504efaec676d
 $ docker images | grep scratch
-scratch                                        latest              920d25467f26        24 seconds ago      0 B18 hours ago        0 B
+scratch    latest       920d25467f26      24 seconds ago      0 B
 ```
 
 ## 制作一个只有bash/ls命令的软件包
@@ -77,7 +77,8 @@ scratch                                        latest              920d25467f26 
 ```
 ### 制作镜像
 
-```# ./build bin/bin/bashbin/lslib64/lib64/libpcre.solib64/libattr.so.1lib64/libselinux.so.1lib64/libtinfo.so.5.9lib64/libtinfo.solib64/libonion.solib64/libcap.so.2.22lib64/libcap.so.2lib64/libonion_security.so.1.0.13lib64/libc.so.6lib64/libpthread.so.0lib64/libtinfo.so.5lib64/liblzma.so.5lib64/libselinux.solib64/ld-linux-x86-64.so.2lib64/libdl-2.17.solib64/libdl.so.2lib64/libpcre.so.1.2.0lib64/libc-2.17.solib64/libpcre.so.1lib64/liblzma.so.5.0.99lib64/libacl.so.1lib64/libattr.so.1.1.0lib64/libacl.so.1.1.0lib64/ld-2.17.solib64/libpthread-2.17.so3bb85eb1065a1d9aafc578866a8011472c13915338b56b55315d343b914f59f2# docker images | grep lsls                            latest              3bb85eb1065a        51 seconds ago      4.907 MB# docker run -it ls bash   bash-4.2# ls -al /bin/                                                                                                                                                                      total 1080drwxr-xr-x  2 0 0   4096 May 17 01:40 .drwxr-xr-x 12 0 0   4096 May 17 03:09 ..-rwxr-xr-x  1 0 0 968840 May 17 01:40 bash-rwxr-xr-x  1 0 0 117616 May 16 10:03 lsbash-4.2# envbash: env: command not foundbash-4.2# exitexit
+```# ./build bin/bin/bashbin/lslib64/lib64/libpcre.solib64/libattr.so.1lib64/libselinux.so.1lib64/libtinfo.so.5.9lib64/libtinfo.solib64/libonion.solib64/libcap.so.2.22lib64/libcap.so.2lib64/libonion_security.so.1.0.13lib64/libc.so.6lib64/libpthread.so.0lib64/libtinfo.so.5lib64/liblzma.so.5lib64/libselinux.solib64/ld-linux-x86-64.so.2lib64/libdl-2.17.solib64/libdl.so.2lib64/libpcre.so.1.2.0lib64/libc-2.17.solib64/libpcre.so.1lib64/liblzma.so.5.0.99lib64/libacl.so.1lib64/libattr.so.1.1.0lib64/libacl.so.1.1.0lib64/ld-2.17.solib64/libpthread-2.17.so3bb85eb1065a1d9aafc578866a8011472c13915338b56b55315d343b914f59f2
+# docker images | grep lsls                            latest              3bb85eb1065a        51 seconds ago      4.907 MB# docker run -it ls bash   bash-4.2# ls -al /bin/                                                                                                                                                                      total 1080drwxr-xr-x  2 0 0   4096 May 17 01:40 .drwxr-xr-x 12 0 0   4096 May 17 03:09 ..-rwxr-xr-x  1 0 0 968840 May 17 01:40 bash-rwxr-xr-x  1 0 0 117616 May 16 10:03 lsbash-4.2# envbash: env: command not foundbash-4.2# exitexit
 ```
 
 ## 制作一个静态链接的go image
@@ -126,7 +127,7 @@ func main() {
 
 ```
 # tar -cv hello | docker import - hellohello54b07c3ecd349750418b65998b350e5878e97dc77d7cbfe542d078817e840210
-# docker run -d -p 8090:8080 --name hello hello /hello78c66a5f7332274ac080dfc8e410314085c5b48b6a60b611ea3d88ddcd242051# docker logs helloStarted, serving at 8080# curl http://127.0.0.1:8090/Hello World from Go in minimal Docker container```
+# docker run -d -p 8090:8080 --name hello hello /hello78c66a5f7332274ac080dfc8e410314085c5b48b6a60b611ea3d88ddcd242051# docker logs helloStarted, serving at 8080# curl http://127.0.0.1:8090/Hello World from Go in minimal Docker container```
 
 
 # 参考
