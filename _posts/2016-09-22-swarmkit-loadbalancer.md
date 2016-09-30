@@ -56,13 +56,14 @@ my-web | c00fffd5faba | 10.0.0.3 10.0.0.2 | 02:42:0a:00:00:03 | worker2
 my-web | e6001f9a802e | 10.0.0.4 10.0.0.2 | 02:42:0a:00:00:04 | worker2
 my-busybox | 8b876998b1c2 | 10.0.0.7 10.0.0.6 | 02:42:0a:00:00:07 | worker2
 
-分别在host/overlay/container network namespace用ip/bridge/iptables/ipvs命令走一圈
+分别在host/overlay/container network namespace用ip/bridge/iptables/ipvsadm命令走一圈
 
 	ip link/address/route/neigh
 	ip netns exec overlay_namespace/container_namespace
 	bridge fdb
 	iptables filter/nat/mangle
-	ipvs
+	## 没有ipvsadm也可以用cat /proc/net/ip_vs
+	ipvsadm
 
 四个容器的network namespace都增加了ipvs配置，并且四个容器ipvs配置都相同
 
@@ -139,6 +140,15 @@ mangle表OUTPUT chain增加了mark规则，四个容器规则相同
     ipvsadm -a -f 1 -r 10.250.1.3:0 -m -w 1
 
 `-set-mark 1`使报文通过OUTPUT chain时打上1的标记，`ipvsadm -A -f 1 -s rr`创建了FWMARK的virtual server，只要报文有1的标记，就会应用ipvs的规则，改变dest ip
+
+    ip address add 10.0.0.2 dev eth1
+
+新加的eth1的secondary ip主要是给容器通过vip访问到自己时使用
+
+SNAT规则主要是用来给容器访问其他容器使用
+
+    iptables -t nat -A POSTROUTING -d 10.0.0.0/24 -m ipvs --ipvs -j SNAT --to-source 10.0.0.5
+    echo 1 > /proc/sys/net/ipv4/vs/conntrack
 
 这样配置的load balance与其他PAAS思路不太相同，规则都配置在了容器的network namespace中，对容器中的应用有很大的干扰。并且容器的overlay网卡还多了一个secondary ip，看起来比较困惑，为什么要这么实现？能否在host/overlay network namespace配置ipvs规则达到相同的效果？
 
