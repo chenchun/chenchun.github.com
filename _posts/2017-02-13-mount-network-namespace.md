@@ -227,7 +227,11 @@ docker daemon重启后，由于docker daemon是其他所有docker_monitor进程�
 
 	# find all namespaces which have a process in it.
 	readlink /proc/*/ns/* | sort -u
+	# enter the namespace
+	nsenter --mount=/proc/19877/ns/net bash
 
 	# find all namespaces which have no processes in it. 
 	# awk '$9 == "proc" {print FILENAME,$0}' /proc/*/mountinfo | sort -k2 -u (kernel < 3.19)
 	awk '$9 == "nsfs" {print FILENAME,$0}' /proc/*/mountinfo | sort -k2 -u
+	# enter the namespace
+	nsenter --mount=/proc/19877/ns/mnt -- nsenter --net=/run/mynetns true
