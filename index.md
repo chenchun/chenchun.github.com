@@ -2,7 +2,6 @@
 layout: page
 title: Chen Chun 
 ---
-{% include JB/setup %}
 
 <ul class="posts">
   {% for post in site.posts %}
