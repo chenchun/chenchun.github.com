@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default 
 title: "docker overlay的使用和原理"
 category : docker 
 tags : [docker, network]

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "ImageMagick"
 description: ""
 category: "图像处理"

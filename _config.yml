@@ -8,7 +8,8 @@ highlighter: rouge
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : My Blog :) 
+title: Hi, I'm Chen Chun 
+description: This is my blog :)
 author :
   name : Chen Chun
   email : chenchun.feed@gmail.com

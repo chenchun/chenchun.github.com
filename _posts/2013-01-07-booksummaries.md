@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "booksummaries"
 description: ""
 category: 读书笔记

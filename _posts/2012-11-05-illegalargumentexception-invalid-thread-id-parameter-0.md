@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "IllegalArgumentException Invalid thread ID parameter: 0"
 description: ""
 category: bug

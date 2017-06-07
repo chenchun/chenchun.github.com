@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "hibernate cancel query"
 description: ""
 category: hibernate
