@@ -5,7 +5,6 @@ description: ""
 category: hive
 tags: [hive]
 ---
-{% include JB/setup %}
 
  
 最近看到0.12版hive中的一个优化Hive Correlation Optimizer，小感慨一下

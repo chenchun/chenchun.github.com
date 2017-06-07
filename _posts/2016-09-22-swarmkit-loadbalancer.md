@@ -5,7 +5,6 @@ description: "swarmkit loadbalancer"
 category: 
 tags: [docker, network]
 ---
-{% include JB/setup %}
 
 docker 1.12版本推出的swarm mode提供了service的负载均衡功能，我们窥一窥实现。
 

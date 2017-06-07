@@ -5,7 +5,6 @@ description: ""
 category: 读书笔记
 tags: [thinking]
 ---
-{% include JB/setup %}
 
 ## 数学之美读书笔记
 

@@ -5,7 +5,6 @@ description: ""
 category: 
 tags: [docker]
 ---
-{% include JB/setup %}
 
 # 静态与动态链接
 

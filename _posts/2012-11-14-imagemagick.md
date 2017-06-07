@@ -5,7 +5,6 @@ description: ""
 category: "图像处理"
 tags: [ImageMagick, java]
 ---
-{% include JB/setup %}
 
 ## ImageMagick
 

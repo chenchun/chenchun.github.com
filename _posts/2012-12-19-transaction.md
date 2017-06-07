@@ -5,7 +5,6 @@ description: ""
 category: 事务
 tags: [java, 并发]
 ---
-{% include JB/setup %}
 
 ## 事务的四大特性
 

@@ -5,7 +5,6 @@ description: ""
 category: bug
 tags: [jdk, java]
 ---
-{% include JB/setup %}
 
 ## Bug
 

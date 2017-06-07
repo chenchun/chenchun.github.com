@@ -5,7 +5,6 @@ category : docker
 tags : [docker, network]
 description: ""
 ---
-{% include JB/setup %}
 
 ## 背景
 

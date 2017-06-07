@@ -5,7 +5,6 @@ description: ""
 category: 
 tags: [namespace, container, kernel]
 ---
-{% include JB/setup %}
 
 # 问题
 

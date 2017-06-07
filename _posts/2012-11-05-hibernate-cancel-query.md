@@ -5,7 +5,6 @@ description: ""
 category: hibernate
 tags: [hibernate, java]
 ---
-{% include JB/setup %}
 
 今天想做一个导出excel的功能，杀掉长时间没有反应的查询，最开始的思路是通过`concurrent`包使用子线程执行，在主线程通过`future`在超时后取消掉查询。
 
