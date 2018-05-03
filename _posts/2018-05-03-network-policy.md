@@ -63,15 +63,15 @@ Kubernetes network policy is superset of multi-tenent network which is a namespa
 
 - `ipset` `hash:ip` is used to match `namespaceSelector` and `podSelector`
 - `ipset` `hash:net` is used to match `ipBlock`, `ipset` supports nomatch option to except serveral cases
-- For `ports` part, we can make same protol ports a single iptables rule by using multiport iptables extension to match them
+- For `ports` part, we can make same protcol ports a single iptables rule by using multiport iptables extension to match them
 
 The ingress rule may be as follows is there is no `bridge` in your cni network
 
-<img src="/images/kubernetes-network-policy/policy-ingress.png"/>
+<img src="/images/kubernetes-network-policy/policy-ingress-rule.png"/>
 
 and egress rule may be
 
-<img src="/images/kubernetes-network-policy/policy-egress.png"/>
+<img src="/images/kubernetes-network-policy/policy-egress-rule.png"/>
 
 # Implementation tips
 
