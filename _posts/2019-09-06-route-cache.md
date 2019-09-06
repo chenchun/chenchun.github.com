@@ -12,7 +12,7 @@ tags: [kernel]
 
 # 解决方法
 
-内核其实有提供route的watch接口，比如通过ip monitor route就可以实时监控路由表的所有变化。笔者不想对内核有任何侵入，猜想是否也可以在内核模块中也通过netlink socket watch路由表的变化？
+内核其实有提供route的watch接口，比如通过ip monitor route就可以实时监控路由表的所有变化。笔者不想对内核有任何侵入，猜想是否也可以在内核模块中也通过netlink socket watch路由表的变化？笔者验证后这种方法可行，下面分享下实现的代码。
 
 # netlink socket
 
