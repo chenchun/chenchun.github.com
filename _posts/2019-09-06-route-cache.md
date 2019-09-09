@@ -238,8 +238,6 @@ static int my_route_delete(__be32 gateway)
 }
 ```
 
-# 
-
 # 参考
 
 - [fib系统分析](https://blog.csdn.net/viewsky11/article/details/53437092)
