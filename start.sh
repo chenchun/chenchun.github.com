@@ -1,1 +1,1 @@
-docker run -d -p 80:4000 --restart=always --name=blog -v $PWD:/blog chenchun/blog bash -c "touch Gemfile.lock && chmod a+w Gemfile.lock && mkdir -p _site && chmod 777 _site && bundle exec jekyll serve -H 0.0.0.0"
+docker run -it --rm -p 80:4000 --name=blog -v $PWD:/blog chenchun/blog bash -c "touch Gemfile.lock && chmod a+w Gemfile.lock && mkdir -p _site && chmod 777 _site && bundle exec jekyll serve -H 0.0.0.0"
