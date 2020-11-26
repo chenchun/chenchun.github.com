@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "The recommender algorithm of vertical pod autoscaler"
-description: "The recommender algorithm of vertical pod autoscaler"
+title: "The recommending algorithm of vertical pod autoscaler"
+description: "The recommending algorithm of vertical pod autoscaler"
 category: "kubernetes"
 tags: [kubernetes]
 ---
