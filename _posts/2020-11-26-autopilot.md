@@ -8,6 +8,8 @@ tags: [kubernetes]
 
 本篇是[Autopilot: workload autoscaling at Google](https://dl.acm.org/doi/pdf/10.1145/3342195.3387524?download=true)垂直自动缩放论文的翻译，第3.2节为全文翻译，第4节-第7节为重点归纳。
 
+文章中公式和符号采用了markdown公式的写法，jekyII不能正常展示，请使用visual Studio Code安装markdown和markdown math插件查看。
+
 # 3 Autopilot自动调整limits
 
 ## 3.2 垂直（每任务）自动缩放
