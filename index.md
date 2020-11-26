@@ -31,7 +31,7 @@ I was a docker [libnetwork project maintainer](https://github.com/docker/libnetw
 
 ## Hadoop and big data ecosystem
 
-- [Hadoop/Hive/Ambari](https://issues.apache.org/jira/issues/?jql=assignee%20in%20(chenchun\))
+- [Hadoop/Hive/Ambari](https://issues.apache.org/jira/issues/?jql=assignee%20in%20(chenchun))
 - [presto](https://github.com/prestodb/presto/pulls?q=is%3Apr+author%3Achenchun+is%3Aclosed)
 
 ## Linux Kernel
@@ -40,8 +40,8 @@ I was a docker [libnetwork project maintainer](https://github.com/docker/libnetw
 
 # Talks
 
-- In January 2016, as a guest speaker of "@Container Container Technology Conference 2016", shared the "Docker Application Practice of Tencent Gaia Platform"
-- In October 2018, as a guest of the China SACC2018, shared the Tencent GaiaStack container product private cloud scenario practice
+- In January 2016, as a guest speaker of "@Container Container Technology Conference 2016", [shared the "Docker Application Practice of Tencent Gaia Platform"](http://dockone.io/article/1555)
+- In October 2018, as a guest of the China SACC2018, [shared the Tencent GaiaStack container product private cloud scenario practice](http://blog.itpub.net/31545813/viewspace-2217150/)
 
 # Posts
 
