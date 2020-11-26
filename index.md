@@ -47,7 +47,10 @@ I was a docker [libnetwork project maintainer](https://github.com/docker/libnetw
 
 <ul class="posts">
   {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+  {% assign ym = post.date | date: "%Y%m" | plus:'0' %}
+  {% if ym >= 201309 %}
+    <li><span>{{ post.date | date: "%Y" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+  {% endif %}
   {% endfor %}
 </ul>
 
