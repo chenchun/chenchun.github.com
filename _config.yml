@@ -17,3 +17,4 @@ author :
   feedburner : feedname
 
 theme: jekyll-theme-cayman
+markdown: kramdown
